@@ -45,9 +45,6 @@ pip install rdkit-pypi xgboost scikit-learn pandas numpy matplotlib seaborn tqdm
 
 The pipeline demonstrates the successful identification of high-potential targets and the generation of novel molecules with predicted high target affinity and favorable ADMET profiles.
 
-**Model Performance for Target Inhibition:**
-![Target AUPRC](figures/target_picks/vertical_collage.png)
-
 **Generated Molecules for Top Targets:**
 ![Generated Molecules](figures/final/result_mols.png)
 
