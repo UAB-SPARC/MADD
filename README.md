@@ -1,6 +1,6 @@
-# An End-to-End Computational Pipeline for AI-Driven Drug Discovery for Alzheimer's Disease
+# Multi-target Parallel Drug Discovery with Multi-agent Orchestration
 
-This repository contains the source code and data for a computational pipeline designed to identify novel therapeutic targets and generate promising lead compounds for Alzheimer's disease.
+This repository contains the source code and data for a agentic pipeline designed to identify novel therapeutic targets and generate promising lead compounds for Alzheimer's disease.
 
 ![Workflow](figures/final/grachical_abstract.png)
 
@@ -23,7 +23,7 @@ This work presents an automated, end-to-end pipeline for AI-driven drug discover
 
 ### Methodology
 
-The computational workflow consists of three primary stages:
+The agentic workflow consists of three primary stages:
 
 1.  **Target Mining (`0_target_mining_...ipynb`)**: This notebook performs a systematic search of the PubMed database to identify and validate potential drug targets based on recent scientific literature.
 2.  **Model Training (`1_ml_training_...ipynb`)**: This notebook trains and validates predictive models for the identified targets using data from ChEMBL, and for key ADMET properties using data from Therapeutics Data Commons (TDC).
