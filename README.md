@@ -1,0 +1,58 @@
+# An End-to-End Computational Pipeline for AI-Driven Drug Discovery for Alzheimer's Disease
+
+This repository contains the source code and data for a computational pipeline designed to identify novel therapeutic targets and generate promising lead compounds for Alzheimer's disease.
+
+![Workflow](figures/final/grachical_abstract.png)
+
+---
+
+### Abstract
+
+This work presents an automated, end-to-end pipeline for AI-driven drug discovery. By integrating large language models for literature-based target identification, robust machine learning models for property prediction, and generative models for de novo molecule design, we demonstrate a comprehensive approach to early-stage therapeutic development. The entire workflow, from target hypothesis to lead candidate generation, is implemented in a series of reproducible Jupyter notebooks. This project was presented at the Stanford AI for Agent-based Causal-aware Drug Discovery Conference.
+
+---
+
+### Key Features
+
+- **Automated Target Identification**: Leverages Large Language Models (Gemini) to parse PubMed abstracts for novel, druggable protein targets implicated in Alzheimer's disease.
+- **Validated Predictive Models**: Implements XGBoost models to predict bioactivity against identified targets and key ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) properties. Models are rigorously validated using scaffold-based splits.
+- **Generative Molecule Design**: Utilizes NVIDIA's MolMIM generative model to design novel molecules with desired properties, based on structurally diverse seed compounds.
+- **Reproducible Workflow**: The entire pipeline is encapsulated in three sequential Jupyter notebooks, ensuring full reproducibility of the results.
+
+---
+
+### Methodology
+
+The computational workflow consists of three primary stages:
+
+1.  **Target Mining (`0_target_mining_...ipynb`)**: This notebook performs a systematic search of the PubMed database to identify and validate potential drug targets based on recent scientific literature.
+2.  **Model Training (`1_ml_training_...ipynb`)**: This notebook trains and validates predictive models for the identified targets using data from ChEMBL, and for key ADMET properties using data from Therapeutics Data Commons (TDC).
+3.  **Molecule Generation and Evaluation (`2_molecule_evaluation_...ipynb`)**: This notebook selects diverse seed compounds from known actives, generates novel analogs using a generative model, and evaluates them using the suite of trained predictive models.
+
+---
+
+### Installation
+
+The project requires Python and several scientific computing libraries. Dependencies can be installed via pip:
+
+```bash
+pip install rdkit-pypi xgboost scikit-learn pandas numpy matplotlib seaborn tqdm requests PyTDC
+```
+
+---
+
+### Results
+
+The pipeline demonstrates the successful identification of high-potential targets and the generation of novel molecules with predicted high target affinity and favorable ADMET profiles.
+
+**Model Performance for Target Inhibition:**
+![Target AUPRC](figures/target_picks/vertical_collage.png)
+
+**Generated Molecules for Top Targets:**
+![Generated Molecules](figures/final/result_mols.png)
+
+---
+
+### Contributions
+
+Feedback, bug reports, and contributions are welcome. Please open an issue or submit a pull request if you have suggestions for improving this work.
