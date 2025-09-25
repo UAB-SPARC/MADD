@@ -6,12 +6,6 @@ This repository contains the source code and data for a agentic pipeline designe
 
 ---
 
-### Abstract
-
-This work presents an automated, end-to-end pipeline for AI-driven drug discovery. By integrating large language models for literature-based target identification, robust machine learning models for property prediction, and generative models for de novo molecule design, we demonstrate a comprehensive approach to early-stage therapeutic development. The entire workflow, from target hypothesis to lead candidate generation, is implemented in a series of reproducible Jupyter notebooks. This project was presented at the Stanford AI for Agent-based Causal-aware Drug Discovery Conference.
-
----
-
 ### Key Features
 
 - **Automated Target Identification**: Leverages Large Language Models (Gemini) to parse PubMed abstracts for novel, druggable protein targets implicated in Alzheimer's disease.
@@ -36,7 +30,7 @@ The agentic workflow consists of three primary stages:
 The project requires Python and several scientific computing libraries. Dependencies can be installed via pip:
 
 ```bash
-pip install rdkit-pypi xgboost scikit-learn pandas numpy matplotlib seaborn tqdm requests PyTDC
+pip install -r requirements.txt
 ```
 
 ---
